@@ -15,6 +15,10 @@
 		E43C477626855D30004C12CA /* CarfaxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C477526855D30004C12CA /* CarfaxTests.swift */; };
 		E43C478126855D30004C12CA /* CarfaxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C478026855D30004C12CA /* CarfaxUITests.swift */; };
 		E43C478F26856185004C12CA /* HomePage.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43C478E26856185004C12CA /* HomePage.xib */; };
+		E43C47922685648E004C12CA /* CarFaxNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C47912685648E004C12CA /* CarFaxNetwork.swift */; };
+		E4832D75268570A300BFE1C4 /* Carfax.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4832D74268570A300BFE1C4 /* Carfax.swift */; };
+		E4CF7CEA2686536A009D62BD /* CarFaxSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF7CE92686536A009D62BD /* CarFaxSession.swift */; };
+		E4CF7CEC26865391009D62BD /* URLSession+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF7CEB26865391009D62BD /* URLSession+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		E43C478026855D30004C12CA /* CarfaxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarfaxUITests.swift; sourceTree = "<group>"; };
 		E43C478226855D30004C12CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E43C478E26856185004C12CA /* HomePage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePage.xib; sourceTree = "<group>"; };
+		E43C47912685648E004C12CA /* CarFaxNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFaxNetwork.swift; sourceTree = "<group>"; };
+		E4832D74268570A300BFE1C4 /* Carfax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carfax.swift; sourceTree = "<group>"; };
+		E4CF7CE92686536A009D62BD /* CarFaxSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFaxSession.swift; sourceTree = "<group>"; };
+		E4CF7CEB26865391009D62BD /* URLSession+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E41697912685701A0087804A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4832D74268570A300BFE1C4 /* Carfax.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E43C475226855D2E004C12CA = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +115,8 @@
 		E43C475D26855D2E004C12CA /* Carfax */ = {
 			isa = PBXGroup;
 			children = (
+				E41697912685701A0087804A /* Model */,
+				E43C47902685646D004C12CA /* Network */,
 				E43C475E26855D2E004C12CA /* AppDelegate.swift */,
 				E43C476026855D2E004C12CA /* SceneDelegate.swift */,
 				E43C476226855D2E004C12CA /* HomePage.swift */,
@@ -126,6 +144,16 @@
 				E43C478226855D30004C12CA /* Info.plist */,
 			);
 			path = CarfaxUITests;
+			sourceTree = "<group>";
+		};
+		E43C47902685646D004C12CA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E43C47912685648E004C12CA /* CarFaxNetwork.swift */,
+				E4CF7CE92686536A009D62BD /* CarFaxSession.swift */,
+				E4CF7CEB26865391009D62BD /* URLSession+.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +287,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E43C476326855D2E004C12CA /* HomePage.swift in Sources */,
+				E43C47922685648E004C12CA /* CarFaxNetwork.swift in Sources */,
 				E43C475F26855D2E004C12CA /* AppDelegate.swift in Sources */,
+				E4CF7CEC26865391009D62BD /* URLSession+.swift in Sources */,
 				E43C476126855D2E004C12CA /* SceneDelegate.swift in Sources */,
+				E4832D75268570A300BFE1C4 /* Carfax.swift in Sources */,
+				E4CF7CEA2686536A009D62BD /* CarFaxSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
