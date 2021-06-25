@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		E43C475F26855D2E004C12CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C475E26855D2E004C12CA /* AppDelegate.swift */; };
 		E43C476126855D2E004C12CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C476026855D2E004C12CA /* SceneDelegate.swift */; };
-		E43C476326855D2E004C12CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C476226855D2E004C12CA /* ViewController.swift */; };
-		E43C476626855D2E004C12CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E43C476426855D2E004C12CA /* Main.storyboard */; };
+		E43C476326855D2E004C12CA /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C476226855D2E004C12CA /* HomePage.swift */; };
 		E43C476826855D30004C12CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E43C476726855D30004C12CA /* Assets.xcassets */; };
 		E43C476B26855D30004C12CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E43C476926855D30004C12CA /* LaunchScreen.storyboard */; };
 		E43C477626855D30004C12CA /* CarfaxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C477526855D30004C12CA /* CarfaxTests.swift */; };
 		E43C478126855D30004C12CA /* CarfaxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C478026855D30004C12CA /* CarfaxUITests.swift */; };
+		E43C478F26856185004C12CA /* HomePage.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43C478E26856185004C12CA /* HomePage.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +38,7 @@
 		E43C475B26855D2E004C12CA /* Carfax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carfax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43C475E26855D2E004C12CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E43C476026855D2E004C12CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E43C476226855D2E004C12CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E43C476526855D2E004C12CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E43C476226855D2E004C12CA /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		E43C476726855D30004C12CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E43C476A26855D30004C12CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E43C476C26855D30004C12CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		E43C477C26855D30004C12CA /* CarfaxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarfaxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43C478026855D30004C12CA /* CarfaxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarfaxUITests.swift; sourceTree = "<group>"; };
 		E43C478226855D30004C12CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E43C478E26856185004C12CA /* HomePage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePage.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +101,8 @@
 			children = (
 				E43C475E26855D2E004C12CA /* AppDelegate.swift */,
 				E43C476026855D2E004C12CA /* SceneDelegate.swift */,
-				E43C476226855D2E004C12CA /* ViewController.swift */,
-				E43C476426855D2E004C12CA /* Main.storyboard */,
+				E43C476226855D2E004C12CA /* HomePage.swift */,
+				E43C478E26856185004C12CA /* HomePage.xib */,
 				E43C476726855D30004C12CA /* Assets.xcassets */,
 				E43C476926855D30004C12CA /* LaunchScreen.storyboard */,
 				E43C476C26855D30004C12CA /* Info.plist */,
@@ -233,7 +233,7 @@
 			files = (
 				E43C476B26855D30004C12CA /* LaunchScreen.storyboard in Resources */,
 				E43C476826855D30004C12CA /* Assets.xcassets in Resources */,
-				E43C476626855D2E004C12CA /* Main.storyboard in Resources */,
+				E43C478F26856185004C12CA /* HomePage.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E43C476326855D2E004C12CA /* ViewController.swift in Sources */,
+				E43C476326855D2E004C12CA /* HomePage.swift in Sources */,
 				E43C475F26855D2E004C12CA /* AppDelegate.swift in Sources */,
 				E43C476126855D2E004C12CA /* SceneDelegate.swift in Sources */,
 			);
@@ -296,14 +296,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E43C476426855D2E004C12CA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E43C476526855D2E004C12CA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E43C476926855D30004C12CA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
