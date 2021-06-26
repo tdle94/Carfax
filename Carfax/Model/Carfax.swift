@@ -40,6 +40,7 @@ struct Vehicle: Decodable {
     let oneOwner: Bool
     let year: Int
     let vin: String
+    let images: VehicleImage
 }
 
 struct Accident: Decodable {
