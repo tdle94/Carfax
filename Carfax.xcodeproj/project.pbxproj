@@ -178,14 +178,13 @@
 		E43C475D26855D2E004C12CA /* Carfax */ = {
 			isa = PBXGroup;
 			children = (
+				E48A2B712688E3CA0026D038 /* ViewControllers */,
 				E4854C85268804490053F2D3 /* View Models */,
 				E4CF7CED26865508009D62BD /* CustomViews */,
 				E41697912685701A0087804A /* Model */,
 				E43C47902685646D004C12CA /* Network */,
 				E43C475E26855D2E004C12CA /* AppDelegate.swift */,
 				E43C476026855D2E004C12CA /* SceneDelegate.swift */,
-				E43C476226855D2E004C12CA /* HomePage.swift */,
-				E43C478E26856185004C12CA /* HomePage.xib */,
 				E43C476726855D30004C12CA /* Assets.xcassets */,
 				E43C476926855D30004C12CA /* LaunchScreen.storyboard */,
 				E43C476C26855D30004C12CA /* Info.plist */,
@@ -229,6 +228,15 @@
 				E4CF7CF2268659AD009D62BD /* HomePageViewModel.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		E48A2B712688E3CA0026D038 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E43C476226855D2E004C12CA /* HomePage.swift */,
+				E43C478E26856185004C12CA /* HomePage.xib */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		E4CF7CED26865508009D62BD /* CustomViews */ = {
