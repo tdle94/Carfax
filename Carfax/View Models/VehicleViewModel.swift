@@ -9,10 +9,32 @@ import Foundation
 import UIKit
 
 class VehicleViewModel {
-    var vehicle: Vehicle
+    let vehicle: Vehicle
     
     var formattedPhoneNumber: String {
         return vehicle.dealer.phone.replacingOccurrences(of: "(\\d{3})(\\d{3})(\\d+)", with: "($1) $2-$3", options: .regularExpression, range: nil)
+    }
+    
+    var makeModelYearLabel: String {
+        return String(vehicle.year) + " " + vehicle.make + " " + vehicle.model
+    }
+    
+    var priceMileageAddress: NSAttributedString {
+        let formatter = NumberFormatter()
+        formatter.locale = Locale.current
+        formatter.numberStyle = .currency
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 2
+        
+        if let currency = formatter.string(from: NSNumber(value: vehicle.listPrice)) {
+            let attrString = NSMutableAttributedString(string: currency, attributes: [ .font: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize) ])
+            attrString.append(NSAttributedString(string: " | " + String(vehicle.mileage) + "k Mi", attributes: [ .font: UIFont.systemFont(ofSize: UIFont.systemFontSize) ]))
+            attrString.append(NSAttributedString(string: " | " + vehicle.dealer.city + ", " + vehicle.dealer.state, attributes: [ .font: UIFont.systemFont(ofSize: UIFont.systemFontSize)]))
+
+            return attrString
+        }
+
+        return NSAttributedString()
     }
     
     init(vehicle: Vehicle) {
