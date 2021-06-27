@@ -13,12 +13,16 @@ class HomePageViewModel {
     
     var carfaxVehicleListing: PublishSubject<[Vehicle]> = PublishSubject()
     
+    var loadingIndicator: PublishSubject<Bool> = PublishSubject()
+    
     init() {
         getVehicles()
     }
     
     func getVehicles() {
+        loadingIndicator.onNext(true)
         network.getVehicles { result in
+            self.loadingIndicator.onNext(false)
             switch result {
             case .success(let carfaxResult):
                 self.carfaxVehicleListing.onNext(carfaxResult.listings)
