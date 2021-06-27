@@ -10,6 +10,8 @@ import SDWebImage
 
 class VehicleTableViewCell: UITableViewCell {
     
+    private var viewModel: VehicleViewModel?
+    
     @IBOutlet weak var vehicleImage: UIImageView! {
         didSet {
             vehicleImage.sd_imageIndicator = SDWebImageActivityIndicator.gray
@@ -19,14 +21,27 @@ class VehicleTableViewCell: UITableViewCell {
     @IBOutlet weak var vehiclePriceMileageAddress: UILabel!
     @IBOutlet weak var dealerPhoneNumberButton: UIButton!
     
+    override func prepareForReuse() {
+        vehicleImage.image = nil
+        viewModel = nil
+    }
     
-    func configureVehicle(_ vehicle: Vehicle) {
-        vehicleMakeModelYearLabel.text = String(vehicle.year) + " " + vehicle.make + " " + vehicle.model
-        vehiclePriceMileageAddress.text = String(vehicle.listPrice) + " | " + String(vehicle.mileage) + "k Mi" + " | " + vehicle.dealer.address
-        vehicleImage.sd_setImage(with: URL(string: vehicle.images.large.first!), completed: nil)
+    func configureVehicle(viewModel: VehicleViewModel) {
+        self.viewModel = viewModel
+
+        vehicleMakeModelYearLabel.text = viewModel.makeModelYearLabel
+        vehiclePriceMileageAddress.attributedText = viewModel.priceMileageAddress
+        dealerPhoneNumberButton.setTitle(viewModel.formattedPhoneNumber, for: .normal)
+        vehicleImage.sd_setImage(with: URL(string: viewModel.vehicle.images.large.first!)) { image, error, _ , _ in
+            if error != nil {
+                self.vehicleImage.image = UIImage(named: "NoImage")
+            } else {
+                self.vehicleImage.image = image
+            }
+        }
     }
     
     @IBAction func callDealerTap() {
-        
+        viewModel?.callDealerPhoneNumber(viewModel?.vehicle.dealer.phone)
     }
 }
