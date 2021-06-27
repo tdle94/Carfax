@@ -20,15 +20,20 @@ class VehicleViewModel {
     }
     
     var priceMileageAddress: NSAttributedString {
-        let formatter = NumberFormatter()
-        formatter.locale = Locale.current
-        formatter.numberStyle = .currency
-        formatter.minimumFractionDigits = 0
-        formatter.maximumFractionDigits = 2
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.locale = Locale.current
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.minimumFractionDigits = 0
+        currencyFormatter.maximumFractionDigits = 2
         
-        if let currency = formatter.string(from: NSNumber(value: vehicle.listPrice)) {
+        let distanceInMiles = Measurement(value: vehicle.mileage, unit: UnitLength.miles)
+        let distanceFormatter = MeasurementFormatter()
+        distanceFormatter.unitStyle = .short
+        distanceFormatter.unitOptions = .providedUnit
+        
+        if let currency = currencyFormatter.string(from: NSNumber(value: vehicle.listPrice)) {
             let attrString = NSMutableAttributedString(string: currency, attributes: [ .font: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize) ])
-            attrString.append(NSAttributedString(string: " | " + String(vehicle.mileage) + "k Mi", attributes: [ .font: UIFont.systemFont(ofSize: UIFont.systemFontSize) ]))
+            attrString.append(NSAttributedString(string: " | " + distanceFormatter.string(from: distanceInMiles), attributes: [ .font: UIFont.systemFont(ofSize: UIFont.systemFontSize) ]))
             attrString.append(NSAttributedString(string: " | " + vehicle.dealer.city + ", " + vehicle.dealer.state, attributes: [ .font: UIFont.systemFont(ofSize: UIFont.systemFontSize)]))
 
             return attrString
